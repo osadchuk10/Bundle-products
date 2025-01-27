@@ -12,6 +12,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "mbc_bundle_builder_mbc_builder_widget_3M7HxY": {
+          "type": "shopify://apps/mbc-bundle-builder/blocks/mbc-builder-widget/b2760cbb-20b7-41db-a8ab-c4b55296aac0",
+          "settings": {
+            "builder_id": ""
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -58,6 +64,7 @@
         }
       },
       "block_order": [
+        "mbc_bundle_builder_mbc_builder_widget_3M7HxY",
         "title",
         "vendor",
         "variant_picker",
@@ -78,25 +85,11 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
+        "bundle_title": "CHECK OUT FULL SET",
+        "bundle_position": "bundle_section",
+        "bundle_button": "View set",
         "padding_top": 64,
         "padding_bottom": 0
-      }
-    },
-    "173797724096c250e1": {
-      "type": "apps",
-      "blocks": {
-        "mbc_bundle_builder_mbc_builder_widget_C7pGHP": {
-          "type": "shopify://apps/mbc-bundle-builder/blocks/mbc-builder-widget/b2760cbb-20b7-41db-a8ab-c4b55296aac0",
-          "settings": {
-            "builder_id": "{{ product.metafields.mbcb.builder_id.value }}"
-          }
-        }
-      },
-      "block_order": [
-        "mbc_bundle_builder_mbc_builder_widget_C7pGHP"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "related-products": {
@@ -120,7 +113,6 @@
   },
   "order": [
     "main",
-    "173797724096c250e1",
     "related-products"
   ]
 }
