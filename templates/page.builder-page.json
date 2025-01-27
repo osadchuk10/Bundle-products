@@ -15,9 +15,27 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "1737977119646b9769": {
+      "type": "apps",
+      "blocks": {
+        "mbc_bundle_builder_mbc_builder_widget_JDJ6bE": {
+          "type": "shopify://apps/mbc-bundle-builder/blocks/mbc-builder-widget/b2760cbb-20b7-41db-a8ab-c4b55296aac0",
+          "settings": {
+            "builder_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "mbc_bundle_builder_mbc_builder_widget_JDJ6bE"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1737977119646b9769"
   ]
 }
