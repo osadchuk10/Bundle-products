@@ -20,7 +20,7 @@
     "1737977119646b9769": {
       "type": "apps",
       "blocks": {
-        "mbc_bundle_builder_mbc_builder_widget_JDJ6bE": {
+        "mbc_bundle_builder_mbc_builder_widget_mmUjxL": {
           "type": "shopify://apps/mbc-bundle-builder/blocks/mbc-builder-widget/b2760cbb-20b7-41db-a8ab-c4b55296aac0",
           "settings": {
             "builder_id": "{{ page.metafields.custom.page_bundler_id.value }}"
@@ -28,7 +28,7 @@
         }
       },
       "block_order": [
-        "mbc_bundle_builder_mbc_builder_widget_JDJ6bE"
+        "mbc_bundle_builder_mbc_builder_widget_mmUjxL"
       ],
       "settings": {
         "include_margins": true
