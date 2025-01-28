@@ -9,10 +9,16 @@
  */
 {
   "sections": {
+    "17380167534316e271": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
-        "mbc_bundle_builder_mbc_builder_widget_3M7HxY": {
+        "mbc_bundle_builder_mbc_builder_widget_CqpcAf": {
           "type": "shopify://apps/mbc-bundle-builder/blocks/mbc-builder-widget/b2760cbb-20b7-41db-a8ab-c4b55296aac0",
           "settings": {
             "builder_id": "{{ product.metafields.mbcb.builder_id.value }}"
@@ -64,7 +70,7 @@
         }
       },
       "block_order": [
-        "mbc_bundle_builder_mbc_builder_widget_3M7HxY",
+        "mbc_bundle_builder_mbc_builder_widget_CqpcAf",
         "title",
         "vendor",
         "variant_picker",
@@ -112,6 +118,7 @@
     }
   },
   "order": [
+    "17380167534316e271",
     "main",
     "related-products"
   ]
