@@ -1,0 +1,25 @@
+.mbcb-flex-container .mbcb-button,
+.mbcb-cart__footer .mbcb-button {
+  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  border: 0;
+  color: rgb(var(--color-button-text));
+  font: inherit;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  transition: box-shadow var(--duration-short) ease;
+  min-width: calc(12rem + var(--buttons-border-width)* 2);
+  min-height: calc(4.5rem + var(--buttons-border-width)* 2);
+}
+.shopify-app-block .mbcb-flex-container .mbcb-button,
+.shopify-app-block .mbcb-cart__footer .mbcb-button {
+  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  border: 0;
+  color: rgb(var(--color-button-text));
+  font: inherit;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  transition: box-shadow var(--duration-short) ease;
+  min-width: calc(12rem + var(--buttons-border-width)* 2);
+  min-height: calc(4.5rem + var(--buttons-border-width)* 2);
+}
+

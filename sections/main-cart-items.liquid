@@ -4,6 +4,7 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'advanced-cart.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -340,6 +341,73 @@
                     </div>
                   </td>
                 </tr>
+                {% assign prod_bundle_id = '' %}
+                {% for prod in collections.all.products %}
+                  {% if prod.title == item.title or item.title contains prod.title %}
+                    {% assign prod_bundle_id = prod.metafields.mbcb.builder_id %}
+                  {% endif %}
+                {% endfor %}
+                {% for page in pages %}
+                  {% if page.metafields.custom.page_bundler_id == prod_bundle_id %}
+                    {% assign page_url = page.url %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+                {% if prod_bundle_id != blank %}
+                  <tr class="cart-item__bundle">
+                    <td class="cart-item__bundle-cell">Bundle Collection:</td>
+                    <td class="cart-item__bundle-cell">
+                      <div>
+                        <ul class="bundle-products grid product-grid contains-card contains-card--product contains-card--standard grid--3-col-desktop grid--2-col-tablet-down">
+                          {% for prod in collections.all.products %}
+                            {% if prod.metafields.mbcb.builder_id == prod_bundle_id %}
+                              <li class="grid__item slider__slide">
+                                {% if prod.featured_image %}
+                                  {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
+                                  <a href="{{ prod.url }}" aria-hidden="true" tabindex="-1">
+                                    <div class="cart-item__image-container gradient global-media-settings">
+                                      <img
+                                        src="{{ prod.featured_image | image_url: width: 200 }}"
+                                        class="cart-item__image"
+                                        alt="{{ prod.featured_image.alt | escape }}"
+                                        loading="lazy"
+                                        width="100"
+                                        height="{{ 100 | divided_by: prod.featured_image.aspect_ratio | ceil }}"
+                                      >
+                                    </div>
+                                  </a>
+                                  <div>{{ prod.title }}</div>
+                                {% endif %}
+                              </li>
+                            {% endif %}
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </td>
+                    <td class="cart-item__bundle-cell">
+                      Buy
+                      <i
+                        ><b>{{ item.title }}</b></i
+                      >
+                      as part of a bundle and save more!
+                      <p>To Buy a set click <a href="{{ page_url }}">here</a></p>
+                    </td>
+                  </tr>
+
+                  <tr class="cart-item__bundle-mobile">
+                    <td class="cart-item__bundle-cell cart-item__bundle-cell-header">Bundle Collection:</td>
+                    <td class="cart-item__bundle-cell">
+                      <p>To Buy a set click <a href="{{ page_url }}">here</a></p>
+                    </td>
+                    <td class="cart-item__bundle-cell">
+                      Buy
+                      <i
+                        ><b>{{ item.title }}</b></i
+                      >
+                      as part of a bundle and save more!
+                    </td>
+                  </tr>
+                {% endif %}
               {%- endfor -%}
             </tbody>
           </table>
@@ -353,6 +421,7 @@
     </p>
   </form>
 </cart-items>
+
 
 {% schema %}
 {

@@ -1,0 +1,26 @@
+.bundle-products .media {
+  position: inherit;
+}
+.cart-item__bundle-cell {
+  vertical-align: middle !important;
+  text-align: center;
+  padding-bottom: 4rem !important;
+}
+.cart-item__bundle {
+  padding-bottom: 4rem;
+}
+@media screen and (max-width: 1023px) {
+  .cart-item__bundle {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cart-item__bundle-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 749px) {
+  .cart-item__bundle-cell-header {
+    display: none;
+  }
+}
