@@ -18,7 +18,7 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "mbc_bundle_builder_mbc_builder_widget_CqpcAf": {
+        "mbc_bundle_builder_mbc_builder_widget_FCT4RH": {
           "type": "shopify://apps/mbc-bundle-builder/blocks/mbc-builder-widget/b2760cbb-20b7-41db-a8ab-c4b55296aac0",
           "settings": {
             "builder_id": "{{ product.metafields.mbcb.builder_id.value }}"
@@ -70,7 +70,7 @@
         }
       },
       "block_order": [
-        "mbc_bundle_builder_mbc_builder_widget_CqpcAf",
+        "mbc_bundle_builder_mbc_builder_widget_FCT4RH",
         "title",
         "vendor",
         "variant_picker",
